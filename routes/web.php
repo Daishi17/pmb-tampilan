@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SiakadController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'SiakadController@index');
+Route::get('/mahasiswa', 'MahasiswaController@index');
+Route::get('/prodi', 'ProgramStudiController@index');
